@@ -1,0 +1,40 @@
+.container{
+    padding: 1em;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main_header{
+    height: 100px;
+    width: 100%;
+    background: cornflowerblue;
+    margin-bottom: 1em;
+}
+
+.middle_list{
+    display: flex;
+    flex-direction: column;
+    background: olivedrab;
+    height: 600px;
+    width: 100%;
+}
+.week_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.week_title{
+    font-size: 20px;
+    padding:1em;
+}
+.day_list{
+    align-items: center;
+    background: dodgerblue;
+    width: 10%;
+    height: 100%;
+    margin: auto;
+}

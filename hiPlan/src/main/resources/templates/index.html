@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Go Planner!</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" th:href="@{/css/default.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
 <body>
 <div class="container">
@@ -14,7 +14,12 @@
     <div class="middle_list">
         <p class="week_title">Week Plan</p>
         <div class="week_list">
-            <ul class="day_list mon"></ul>
+            <ul th:each="item : ${items}" class="day_list mon">
+                <li>
+                    <span th:text="${item.title}"></span>
+                    <span th:text="${item.description}"></span>
+                </li>
+            </ul>
             <ul class="day_list tus"></ul>
             <ul class="day_list wen"></ul>
             <ul class="day_list tus"></ul>

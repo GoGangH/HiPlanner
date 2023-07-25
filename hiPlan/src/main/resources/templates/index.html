@@ -14,18 +14,62 @@
     <div class="middle_list">
         <p class="week_title">Week Plan</p>
         <div class="week_list">
-            <ul th:each="item : ${items}" class="day_list mon">
-                <li>
-                    <span th:text="${item.title}"></span>
-                    <span th:text="${item.description}"></span>
-                </li>
-            </ul>
-            <ul class="day_list tus"></ul>
-            <ul class="day_list wen"></ul>
-            <ul class="day_list tus"></ul>
-            <ul class="day_list fri"></ul>
-            <ul class="day_list sat"></ul>
-            <ul class="day_list sun"></ul>
+            <div class="day_list mon">
+                <ul th:each="item : ${mon_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list tus">
+                <ul th:each="item : ${tus_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list wen">
+                <ul th:each="item : ${wen_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list ths">
+                <ul th:each="item : ${ths_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list fri">
+                <ul th:each="item : ${fri_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list sat">
+                <ul th:each="item : ${sat_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="day_list sun">
+                <ul th:each="item : ${sun_items}">
+                    <li>
+                        <span th:text="${item.title}"></span>
+                        <span th:text="${item.description}"></span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

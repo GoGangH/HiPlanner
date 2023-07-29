@@ -38,3 +38,16 @@
     height: 100%;
     margin: auto;
 }
+.bottom_list{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    background: hotpink;
+}
+.allday_title{
+    font-size: 20px;
+    padding:1em;
+}

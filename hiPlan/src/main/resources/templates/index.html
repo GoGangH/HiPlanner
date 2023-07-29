@@ -19,6 +19,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -27,6 +28,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -35,6 +37,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -43,6 +46,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -51,6 +55,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -59,6 +64,7 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
@@ -67,9 +73,22 @@
                     <li>
                         <span th:text="${item.title}"></span>
                         <span th:text="${item.description}"></span>
+                        <progress th:value="${item.percentage}" max="100"></progress>
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class = "bottom_list">
+        <a class="allday_title">매일 할일</a>
+        <div class = "plan_box">
+            <ul th:each="item : ${all_items}">
+                <li>
+                    <span th:text="${item.title}"></span>
+                    <span th:text="${item.description}"></span>
+                    <progress th:value="${item.percentage}" max="100"></progress>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

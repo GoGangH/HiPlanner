@@ -27,6 +27,7 @@ public class PlanController {
         model.addAttribute("fri_items", items.get("fri"));
         model.addAttribute("sat_items", items.get("sat"));
         model.addAttribute("sun_items", items.get("sun"));
+        model.addAttribute("all_items", items.get("all"));
         return "index";
     }
 }

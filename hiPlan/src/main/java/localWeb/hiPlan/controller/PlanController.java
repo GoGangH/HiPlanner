@@ -20,6 +20,8 @@ public class PlanController {
     @GetMapping("/")
     public String list(Model model){
         Map<String, List<PlanDto>> items = planService.findItemsForWeek();
+        int successRate = planService.calSuccessRate();
+        model.addAttribute("success_rate", successRate);
         model.addAttribute("mon_items", items.get("mon"));
         model.addAttribute("tus_items", items.get("tus"));
         model.addAttribute("wne_items", items.get("wen"));

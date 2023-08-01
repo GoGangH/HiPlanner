@@ -5,14 +5,17 @@
     <title>Go Planner!</title>
     <link rel="stylesheet" th:href="@{/css/default.css}">
     <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/button.scss}">
 </head>
 <body>
 <div class="container">
     <div class="main_header">
-        <button>일정 추가</button>
+        <button class="add_button">+ Add</button>
     </div>
     <div class="middle_list">
-        <p class="week_title">Week Plan</p>
+        <div class = "middle_nav">
+            <p class="week_title">Week Plan <br><progress th:value="${success_rate}" max="100"></progress></p>
+        </div>
         <div class="week_list">
             <div class="day_list mon">
                 <ul th:each="item : ${mon_items}">

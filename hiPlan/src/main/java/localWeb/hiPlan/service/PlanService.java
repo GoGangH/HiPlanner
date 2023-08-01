@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @Transactional
@@ -39,5 +36,17 @@ public class PlanService {
         }
 
         return weekItems;
+    }
+
+    public int calSuccessRate(){
+        List<PlanItem> items = findItems();
+        float successRate = 0;
+        for(PlanItem item : items){
+            if(Objects.equals(item.getSituation(), "done")){
+                successRate+=1;
+            }
+        }
+        successRate = (successRate/items.size())*100;
+        return (int) successRate;
     }
 }

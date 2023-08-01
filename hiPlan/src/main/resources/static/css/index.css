@@ -51,3 +51,9 @@
     font-size: 20px;
     padding:1em;
 }
+
+.middle_nav{
+    display: flex;
+    align-content: flex-end;
+    background: olive;
+}
